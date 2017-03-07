@@ -1,0 +1,32 @@
+body{
+	padding-top: 70px;
+	padding-left: 120px;
+	background: yellow;
+}
+body .isStu{
+	width: 400px;
+	height:400px;
+	border:2px solid black;
+	margin-bottom: 20px;
+
+}
+.ju{
+	width: 200px;
+	height: 1px;
+	background: black;
+	position: absolute;
+	top: 50%;
+	
+
+}
+.mu{
+	width: 200px;
+	position: relative;
+	height: 20px;
+}
+.zi{
+	width: 100px;
+	text-align: center;
+	line-height: 10px;
+	background: white;
+}
