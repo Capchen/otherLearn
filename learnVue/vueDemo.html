@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="vue.js"></script>
-	<script type="text/javascript">
+  <script type="text/javascript">
 		Vue.component("todo-item",{
 			props:['todo'],
 			template:'<li>{{todo.text}}</li>'
@@ -14,6 +14,10 @@
 			props:["person"],
 			template:"<li>{{person.name}}{{person.age}}&nbsp;&nbsp;{{person.job}}</li>"//
 		})
+
+
+
+
 	</script>
 </head>
 <body>
@@ -24,12 +28,19 @@
 	<div id="app-2">
 		<span v-bind:title="message">说出来你可能不信，鼠标停留几秒算我输</span>
 	</div>
+	<div class="" id="chen">
+			<a v-bind:href="message" v-if="seen">跳转到百度</a>
+	</div>
+
+
+
+
 	<br>
 	<div id="app-3">
 		<span v-if:title="seen">现在你看到我了</span>
 	</div>
 
-	
+
 	<br>
 	<div id="app-7">
 		<ol>
@@ -41,54 +52,118 @@
 		<ul>
 			<chenjian-msg v-bind:person="jju"></chenjian-msg>
 		</ul>
-		
+
 	</div>
 
 
+	<div class="" id="app-5">
+		<p v-on:click="show_tips" v-if="isShow">{{message}}</p>
+	</div>
+
+<div id="emple">
+		<my-compontent></my-compontent>
+		<name-fuck></name-fuck>
+</div>
 	<script type="text/javascript">
-		var app = new Vue({
-			el:"#app",
-			data:{
-				message:"fuck you"
-			}
-		})
+	// Vue.component("my-compontent",{
+	// 		template : '<div>chenjian</div>'
+	// });
+	// new Vue({
+	// 	el : "#emple"
+	// })
 
-		var app2 = new Vue({
-			el:"#app-2",
-			data:{
-				message:'算我输'
-			}
-		})
+var Child = {
+	template : '<div>fuck no one</div>'
+};
 
-		var app3 = new Vue({
-			el:"#app-3",
-			data:{
-				seen:true
-			}
-		})
+new Vue({
+	el : "#emple",
+	components:{
+			"name-fuck" : Child
+	}
+
+})
 
 
-		var  app7 = new Vue({
-			el:"#app-7",
-			data:{
-				groceryList:[
-					{ text: '蔬菜' },
-					      { text: '奶酪' },
-					      { text: '随便其他什么人吃的东西' }
-				]
-			}
-		})
 
-		var  app8 = new Vue({
-			el:"#app-8",
-			data:{
-				jju:{
-					'name':"jianjian",
-					'age':"21",
-					'job':"chengxuyuan"
-				}
-			}
-		})
+
+		// var app = new Vue({
+		// 	el:"#app",
+		// 	data:{
+		// 		message:"fuck you"
+		// 	}
+		// })
+		//
+		// var app2 = new Vue({
+		// 	el:"#app-2",
+		// 	data:{
+		// 		message:'算我输'
+		// 	}
+		// })
+		//
+		//
+		// var chen = new Vue({
+		// 	el:"#chen",
+		// 	data : {
+		// 		message : "http://www.baidu.com",
+		// 		seen :true
+		// 	}
+		// })
+		//
+		// var app5 = new Vue({
+		// 	el : "#app-5",
+		// 	data : {
+		// 			message : "你借",
+		// 			isShow : "true"
+		// 	},
+		// 	methods : {
+		// 		show_tips : function(){
+		// 			 	console.log(this.message);
+		//
+		// 			if(this.message == "chenjian"){
+		// 				this.isShow = false
+		// 			}else {
+		// 				this.message = "chenjian"
+		// 			}
+		// 				}
+		//
+		// 	}
+		// })
+
+
+
+		// var app3 = new Vue({
+		// 	el:"#app-3",
+		// 	data:{
+		// 		seen:true
+		// 	}
+		// })
+		//
+		//
+		// var  app7 = new Vue({
+		// 	el:"#app-7",
+		// 	data:{
+		// 		groceryList:[
+		// 			{ text: '蔬菜' },
+		// 			      { text: '奶酪' },
+		// 			      { text: '随便其他什么人吃的东西' }
+		// 		]
+		// 	}
+		// })
+		//
+		// var  app8 = new Vue({
+		// 	el:"#app-8",
+		// 	data:{
+		// 		jju:{
+		// 			'name':"jianjian",
+		// 			'age':"21",
+		// 			'job':"chengxuyuan"
+		// 		}
+		// 	}
+		// })
+
+
+
 
 
 	</script>

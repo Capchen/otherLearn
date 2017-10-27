@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <!--<meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">-->
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/my-style.css" rel="stylesheet" />
+    <link href="css/main-color.css" rel="stylesheet" />
+    <link href="css/ui-font.css" rel="stylesheet" />
+      <style>
+          .change{
+              opacity: 0.5;
+          }
+      </style>
+  </head>
+  <body>
+    <section class="main fixed" data-page="home">
+        <header class="header">
+            <div class="header_inner">
+                <a class="back_pre" href="javascript:;"><i></i></a>
+                <h1 class="title text-center">我的消息</h1>
+                <!-- <a class="ask" href="javascript:;"></a> -->
+            </div>
+        </header>
+        <article class="content">
+            <div class="main_box">
+                <div class="massagebox">
+                    <ul id="chen">
+                        <li class="mass_lc " id="chen1">
+
+                        </li>
+                        <li class="mass_xt" id="chen2">
+
+                        </li>
+                        <li class="mass_dy" id="chen3">
+
+                        </li>
+                        <li class="mass_zx" id="chen4">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </section>
+  </body>
+  <script src="jquery-1.8.3.min.js"></script>
+  <!--<script src="zepto.min.js"></script>-->
+  <script>
+      /*var ul = $(".massagebox>ul");
+
+       ul.on("touchstart",function (e) {
+       e.preventDefault();
+       console.log(e);
+       if(e.target && e.target.nodeName == "LI"){
+       $(e.target).siblings().removeClass("change");
+       $(e.target).addClass("change");
+       }
+       })*/
+//      ul.on("touchmove",function (e) {
+//          e.preventDefault();
+//          //document.elementFromPoint()
+//
+//          console.log(e);
+//
+//          if(e.target && e.target.nodeName == "LI"){
+//          var i;
+//          for (i=0; i < e.changedTouches.length; i++) {
+//              console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
+//              console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
+//          }
+//              $(e.target).siblings().removeClass("change");
+//              $(e.target).addClass("change");
+//          }
+//      })
+      // Register a touchmove listeners for the 'source' element
+      var src = document.getElementById("chen1");
+      var srcJ = $("#chen1");
+      var ul = document.getElementById("chen");
+
+      src.addEventListener('touchmove', function(e) {
+          // Iterate through the touch points that have moved and log each
+          // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
+          console.log(e);
+          var i;
+          for (i=0; i < e.changedTouches.length; i++) {
+              console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
+              console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
+          }
+      }, false);
+//      srcJ.on("touchmove",function(e){
+//          alert("111");
+//          console.log(e);
+//      })
+     /* srcJ.swipe(function (e) {
+          console.log(e);
+      })*/
+//    ul.addEventListener('touchmove', function(e) {
+//        // Iterate through the touch points that have moved and log each
+//        // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
+//        console.log(e);
+//        var i;
+//        for (i=0; i < e.changedTouches.length; i++) {
+//            console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
+//            console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
+//        }
+//    }, false);
+
+  </script>
+</html>
